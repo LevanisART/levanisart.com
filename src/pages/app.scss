@@ -1,0 +1,115 @@
+@import '_fonts';
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+  font-size: 100%;
+  font-family: 'Open Sauce Sans';
+	vertical-align: baseline;
+}
+
+.content {
+  margin: 65px 0;
+}
+
+.site-title {
+  font: {
+    size: 29px;
+    weight: 500;
+  }
+  a {
+    color: #000;
+    &:hover {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+}
+
+.main {
+  margin-top: 112px;
+}
+
+.nav-item {
+  margin: 0 19px;
+  letter-spacing: .5px;
+  .nav-link {
+    color: #000;
+    position: relative;
+    padding: 4px 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font: {
+      size: 15px;
+      weight: 300;
+    }
+    &:hover {
+      color: #000;
+    }
+    &.active {
+      &::after {
+        content: '';
+        width: calc(100% + 0px);
+        display: flex;
+        height: 1px;
+        margin-top: 2px;
+        background: #000;
+      }
+    }
+  }
+}
+
+.socials {
+  margin-top: 2px;
+  margin-left: 45px;
+  .social:last-child {
+    margin-left: 44px;
+  }
+}
+
+.job-title {
+  display: flex;
+  align-items: center;
+  font: {
+    size: 29px;
+    weight: 400;
+  }
+  &::before {
+    content: '';
+    display: flex;
+    width: 25px;
+    height: 3px;
+    background: #000;
+    border-radius: 50rem;
+    margin-right: 14px;
+  }
+}
+
+.projects {
+  margin-top: 70px;
+}
+
+.projects-row {
+  margin-left: -30px;
+  margin-right: -30px;
+}
+
+.project {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 40px;
+}

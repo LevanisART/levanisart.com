@@ -3,36 +3,47 @@ import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./app.scss"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Img from "gatsby-image"
 
-
-const BlogLink = styled(Link)`
+const ProjectLink = styled(Link)`
   text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 `;
 
-const BlogTitle = styled.h3`
-  margin-bottom: 20px;
-  color: blue;
+const ProjectTitle = styled.h3`
+  color: #000;
+  font-size: 22px;
+  font-weight: 400;
+  &:hover {
+    color: #000;
+  }
 `;
 
 export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Portfolio" />
-      <h1>{data.site.siteMetadata.occupation}</h1>
-
-        <h4>{ data.allMarkdownRemark.totalCount }</h4>
+      <h2 class="job-title">{data.site.siteMetadata.occupation}</h2>
+      <div class="projects row projects-row">
         {
           data.allMarkdownRemark.edges.map(({node}) => (
-            <div key={node.id}>
-              <BlogLink to={node.fields.slug}>
-                <BlogTitle>{ node.frontmatter.title }</BlogTitle>
-              </BlogLink>
-              <p>{node.excerpt}</p>
+            <div key={node.id} className="project col-6">
+              <div className="project d-flex flex-column">              
+                <ProjectLink to={node.fields.slug}>
+                  <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
+                  <ProjectTitle className="mt-4 align-self-center text-center">{ node.frontmatter.title }</ProjectTitle>
+                </ProjectLink>
+                {/* <p>{node.excerpt}</p> */}
+              </div>
             </div>
           ))
         }
+      </div>
     </Layout>
   )
 }
@@ -52,6 +63,13 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            featuredImage {
+              childImageSharp {
+                sizes(quality: 100) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
           fields {
             slug
