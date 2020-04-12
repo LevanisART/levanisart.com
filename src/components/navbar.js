@@ -20,7 +20,6 @@ class Navigation extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log('component updated');
     const body = document.querySelector('body');
     const navbarbg = document.querySelector('.navbar-bg');
 
@@ -39,9 +38,9 @@ class Navigation extends React.Component {
   render() {
     return (
       <div>
-        <div class="navbar-bg"></div>
+        <div className="navbar-bg"></div>
         <Navbar collapseOnSelect expand="lg" className="p-0">
-          <div class="header-burger d-flex align-items-center">
+          <div className="header-burger d-flex align-items-center">
             <Navbar.Toggle 
               aria-controls="responsive-navbar-nav" 
               className="header-burger-btn burger"
@@ -49,8 +48,8 @@ class Navigation extends React.Component {
                 this.update()
               }}
             >
-              <div class="burger-box">
-                <div class="burger-inner"></div>
+              <div className="burger-box">
+                <div className="burger-inner"></div>
               </div>
             </Navbar.Toggle>
           </div>

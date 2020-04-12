@@ -4,7 +4,7 @@ import { Navbar, Nav } from 'react-bootstrap'
 import { Link } from "gatsby"
 
 const Footer = () => (
-  <footer class="footer d-flex flex-column justify-content-center align-items-center">
+  <footer className="footer d-flex flex-column justify-content-center align-items-center">
     <Socials />
 
     <Navbar className="p-0">

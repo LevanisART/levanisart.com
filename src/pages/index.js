@@ -18,6 +18,7 @@ const ProjectLink = styled(Link)`
 const ProjectTitle = styled.h3`
   color: #000;
   font-size: 22px;
+  line-height: 37px;
   font-weight: 400;
   &:hover {
     color: #000;
@@ -32,15 +33,15 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Portfolio" />
-      <h2 class="job-title">{data.site.siteMetadata.occupation}</h2>
-      <div class="projects row projects-row">
+      <h2 className="job-title">{data.site.siteMetadata.occupation}</h2>
+      <div className="projects row projects-row">
         {
           data.allMarkdownRemark.edges.map(({node}) => (
             <div key={node.id} className="project col-md-6">
               <div className="project d-flex flex-column">              
                 <ProjectLink to={node.fields.slug}>
                   <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
-                  <ProjectTitle className="mt-4 align-self-center text-center">{ node.frontmatter.title }</ProjectTitle>
+                  <ProjectTitle className="mt-3 pt-1 align-self-center text-center">{ node.frontmatter.title }</ProjectTitle>
                 </ProjectLink>
                 {/* <p>{node.excerpt}</p> */}
               </div>

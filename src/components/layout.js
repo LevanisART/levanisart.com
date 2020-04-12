@@ -25,10 +25,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-    <div class="content px-2 px-sm-0">
+    <div className="content px-2 px-sm-0">
       <div className="container px-4 px-sm-3">
         <Header siteTitle={data.site.siteMetadata.title} />
-        <main class="main">{children}</main>
+        <main className="main">{children}</main>
         <Footer />
       </div>
     </div>
