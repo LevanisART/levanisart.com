@@ -22,6 +22,10 @@ const ProjectTitle = styled.h3`
   &:hover {
     color: #000;
   }
+  @media(max-width: 575.98px) {
+    font-size: 20px;
+    font-weight: 500;
+  }
 `;
 
 export default ({ data }) => {
@@ -32,7 +36,7 @@ export default ({ data }) => {
       <div class="projects row projects-row">
         {
           data.allMarkdownRemark.edges.map(({node}) => (
-            <div key={node.id} className="project col-6">
+            <div key={node.id} className="project col-md-6">
               <div className="project d-flex flex-column">              
                 <ProjectLink to={node.fields.slug}>
                   <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />

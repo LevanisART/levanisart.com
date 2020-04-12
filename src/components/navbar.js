@@ -1,33 +1,78 @@
 import React from 'react';
 import { Link } from "gatsby"
 import { Navbar, Nav } from 'react-bootstrap'
+import Socials from './socials'
 
-const Navigation = () => {
-  return (
-    <Navbar collapseOnSelect expand="lg" className="p-0">
-      <div class="header-burger" data-animation-role="header-element" id="yui_3_17_2_1_1586697336123_212">
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" className="header-burger-btn burger">
-          <div class="burger-box">
-            <div class="burger-inner"></div>
+class Navigation extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      navbarOpen: false
+    }
+  }
+
+
+  update() {
+    this.setState(prevState => ({
+      navbarOpen: !prevState.navbarOpen
+    }))
+  }
+
+  componentDidUpdate() {
+    console.log('component updated');
+    const body = document.querySelector('body');
+    const navbarbg = document.querySelector('.navbar-bg');
+
+    if(this.state.navbarOpen === false) {
+      body.style.position = 'static';
+      navbarbg.style.background = 'none';
+      navbarbg.style.visibility = 'hidden';
+    } 
+    if(this.state.navbarOpen === true) {
+      body.style.position = 'fixed';
+      navbarbg.style.background = '#FFF';
+      navbarbg.style.visibility = 'visible';
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <div class="navbar-bg"></div>
+        <Navbar collapseOnSelect expand="lg" className="p-0">
+          <div class="header-burger d-flex align-items-center">
+            <Navbar.Toggle 
+              aria-controls="responsive-navbar-nav" 
+              className="header-burger-btn burger"
+              onClick={() => {
+                this.update()
+              }}
+            >
+              <div class="burger-box">
+                <div class="burger-inner"></div>
+              </div>
+            </Navbar.Toggle>
           </div>
-        </Navbar.Toggle>
+    
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav>
+              <li className="nav-item">
+                <Link activeClassName="active" className="nav-link" to="/">Work</Link>
+              </li>
+              <li className="nav-item">
+                <Link activeClassName="active" className="nav-link" to="/about">About</Link>
+              </li>
+              <li className="nav-item">
+                <Link activeClassName="active" className="nav-link" to="/contact">Contact</Link>
+              </li>
+            </Nav>
+            <Socials />
+          </Navbar.Collapse>
+        </Navbar>
       </div>
-
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto">
-          <li className="nav-item">
-            <Link activeClassName="active" className="nav-link" to="/">Work</Link>
-          </li>
-          <li className="nav-item">
-            <Link activeClassName="active" className="nav-link" to="/about">About</Link>
-          </li>
-          <li className="nav-item">
-            <Link activeClassName="active" className="nav-link" to="/contact">Contact</Link>
-          </li>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
-  )
+    )
+  }
 }
 
 export default Navigation;
