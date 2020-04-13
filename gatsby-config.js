@@ -4,7 +4,7 @@ module.exports = {
     twitterHandle: '@levanisart',
     occupation: `UI/UX Product Designer & Front-end Developer`,
     url: `https://levanisart.com`,
-    image: `/src/images/levanisart.png`,
+    image: `${__dirname}/src/images/levanisart.png`,
     author: `Levani`
   },
   plugins: [
@@ -36,12 +36,10 @@ module.exports = {
         start_url: `/`,
         background_color: `#000`,
         theme_color: `#000`,
-        display: `minimal-ui`
-        // icon: `src/images/gatsby-icon.png`
+        display: `minimal-ui`,
+        icon: `src/images/icon.png`
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`
   ],
 }
