@@ -18,6 +18,11 @@ class Navigation extends React.Component {
     }))
   }
 
+  updateBodyStyle() {
+    const body = document.querySelector('body');
+    body.style.position = 'static';
+  }
+
   componentDidUpdate() {
     const body = document.querySelector('body');
     const navbarbg = document.querySelector('.navbar-bg');
@@ -56,13 +61,13 @@ class Navigation extends React.Component {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav>
               <div className="nav-item">
-                <Link activeClassName="active" className="nav-link" to="/">Work</Link>
+                <Link activeClassName="active" className="nav-link" to="/" onClick={() => {this.updateBodyStyle()}}>Work</Link>
               </div>
               {/* <li className="nav-item">
                 <Link activeClassName="active" className="nav-link" to="/about">About</Link>
               </li> */}
               <div className="nav-item">
-                <Link activeClassName="active" className="nav-link" to="/contact">Contact</Link>
+                <Link activeClassName="active" className="nav-link" to="/contact" onClick={() => {this.updateBodyStyle()}}>Contact</Link>
               </div>
             </Nav>
             <Socials />
