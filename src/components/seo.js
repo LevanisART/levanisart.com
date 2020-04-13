@@ -3,18 +3,19 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
-const SEO = ({ title, lang, image, article }) => {
+
+const SEO = ({ title, occupation, lang, image, article }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
   const {
     defaultTitle,
-    occupation,
+    defaultOccupation,
     siteUrl,
     defaultImage,
   } = site.siteMetadata
   const seo = {
     title: title || defaultTitle,
-    occupation: occupation,
+    occupation: occupation || defaultOccupation,
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
   }
@@ -31,13 +32,13 @@ const SEO = ({ title, lang, image, article }) => {
       {seo.url && <meta property="og:url" content={seo.url} />}
       {(article ? true : null) && <meta property="og:type" content="article" />}
       {seo.title && <meta property="og:title" content={seo.title} />}
-      {seo.description && (
+      {seo.occupation && (
         <meta property="og:description" content={seo.occupation} />
       )}
       {seo.image && <meta property="og:image" content={seo.image} />}
       <meta name="twitter:card" content="summary_large_image" />
       {seo.title && <meta name="twitter:title" content={seo.title} />}
-      {seo.description && (
+      {seo.occupation && (
         <meta name="twitter:description" content={seo.occupation} />
       )}
       {seo.image && <meta name="twitter:image" content={seo.image} />}
