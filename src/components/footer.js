@@ -9,15 +9,15 @@ const Footer = () => (
 
     <Navbar className="p-0">
       <Nav className="mr-auto">
-        <li className="nav-item">
+        <div className="nav-item">
           <Link activeClassName="active" className="nav-link" to="/">Work</Link>
-        </li>
-        {/* <li className="nav-item">
+        </div>
+        {/* <div className="nav-item">
           <Link activeClassName="active" className="nav-link" to="/about">About</Link>
-        </li> */}
-        <li className="nav-item">
+        </div> */}
+        <div className="nav-item">
           <Link activeClassName="active" className="nav-link" to="/contact">Contact</Link>
-        </li>
+        </div>
       </Nav>
     </Navbar>
 
