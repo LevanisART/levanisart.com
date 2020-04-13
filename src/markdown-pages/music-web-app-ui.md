@@ -1,8 +1,10 @@
 ---
 title: "Music Web App UI"
 date: "2019-10-20"
+category: "UI/UX Design"
+client: false
 featuredImage: "../images/music-web-app.png"
-client: "Music"
+sharebuttons: true
 projectLink: "https://dribbble.com/shots/7687430-Music-Web-App-UI"
 ---
 

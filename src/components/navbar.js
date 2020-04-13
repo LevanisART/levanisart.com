@@ -55,15 +55,15 @@ class Navigation extends React.Component {
     
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav>
-              <li className="nav-item">
+              <div className="nav-item">
                 <Link activeClassName="active" className="nav-link" to="/">Work</Link>
-              </li>
+              </div>
               {/* <li className="nav-item">
                 <Link activeClassName="active" className="nav-link" to="/about">About</Link>
               </li> */}
-              <li className="nav-item">
+              <div className="nav-item">
                 <Link activeClassName="active" className="nav-link" to="/contact">Contact</Link>
-              </li>
+              </div>
             </Nav>
             <Socials />
           </Navbar.Collapse>
