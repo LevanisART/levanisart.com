@@ -68,12 +68,17 @@ const ViewProject = styled.a`
 
 export default ({ data }) => {
   const project = data.markdownRemark;
-
-  const slug = project.fields.slug;
-  const url = data.site.siteMetadata.url;
   const image = project.frontmatter.featuredImage.childImageSharp.sizes.originalImg;
-  const title = project.frontmatter.title;
-  const twitterHandle = data.site.siteMetadata.twitterHandle;
+
+  const {
+		markdownRemark: {
+			frontmatter: { title },
+			fields: { slug }
+		},
+		site: {
+			siteMetadata: { url, twitterHandle },
+		},
+	} = data;
 
   return (
     <Layout>

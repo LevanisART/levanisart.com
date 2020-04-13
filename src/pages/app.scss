@@ -44,18 +44,14 @@ input, select, textarea {
 
 input[type=submit] {
   width: unset;
-  background-color: #000;
   border: none;
   cursor: pointer;
-  padding: 11px 20px;
-  color: #FFF;
-  border-radius: 5px;
+  padding: 16px 30px;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 0;
   font-size: 15px;
   font-weight: 500;
-}
-
-input[type=submit]:hover {
-  color: #FFF;
 }
 
 textarea {
