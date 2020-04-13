@@ -1,9 +1,13 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Levan K. - Portfolio",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Levan Kotolashvili <levani.qotolashvili@gmail.com>",
+  "engines": {
+    "node": "12.14.0",
+    "npm": "6.14.3"
+  },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "bootstrap": "^4.4.1",
@@ -36,18 +40,14 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "heroku-postbuild": "gatsby build",
+    "start": "gatsby serve",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/LevanisART/gatsby-portfolio"
   }
 }
