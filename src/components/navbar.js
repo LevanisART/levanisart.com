@@ -12,7 +12,6 @@ class Navigation extends React.Component {
     }
   }
 
-
   update() {
     this.setState(prevState => ({
       navbarOpen: !prevState.navbarOpen
