@@ -4,8 +4,8 @@ module.exports = {
     twitterHandle: '@levanisart',
     occupation: `UI/UX Product Designer & Front-end Developer`,
     url: `https://levanisart.com`,
-    image: `${__dirname}/src/images/levanisart.png`,
-    author: `Levani`
+    author: `Levani`,
+    image: `https://i.ibb.co/wBnvggV/LA.png`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

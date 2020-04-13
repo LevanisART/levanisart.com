@@ -16,7 +16,7 @@ const SEO = ({ title, occupation, lang, image, article }) => {
   const seo = {
     title: title || defaultTitle,
     occupation: occupation || defaultOccupation,
-    image: `${siteUrl}${image || defaultImage}`,
+    image: image || defaultImage,
     url: `${siteUrl}${pathname}`,
   }
   return (
