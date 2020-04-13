@@ -38,7 +38,7 @@ export default ({ data }) => {
         {
           data.allMarkdownRemark.edges.map(({node}) => (
             <div key={node.id} className="project col-md-6">
-              <div className="project d-flex flex-column">              
+              <div className="d-flex flex-column">              
                 <ProjectLink to={node.fields.slug}>
                   <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
                   <ProjectTitle className="mt-3 pt-1 align-self-center text-center">{ node.frontmatter.title }</ProjectTitle>

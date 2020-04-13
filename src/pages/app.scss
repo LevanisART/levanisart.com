@@ -30,6 +30,39 @@ button:focus {
   outline: none;
 }
 
+input, select, textarea {
+  width: 100%;
+  padding: 17px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(223, 223, 223);
+  color: #000;
+  font-size: 14px;
+  line-height: normal;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+input[type=submit] {
+  width: unset;
+  background-color: #000;
+  border: none;
+  cursor: pointer;
+  padding: 11px 20px;
+  color: #FFF;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+input[type=submit]:hover {
+  color: #FFF;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+
 .content {
   margin: 65px 0;
 }
@@ -165,7 +198,7 @@ button:focus {
 .header .socials {
   margin-top: -5px;
   .social {
-    margin-left: 44px;
+    margin-left: 34px;
   }
 }
 
@@ -231,11 +264,23 @@ button:focus {
 }
 
 .project {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-bottom: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 80px;
 }
 
+
+@media(max-width: 992.98px) {
+  .projects-row {
+    margin-left: -22px;
+    margin-right: -22px;
+  }
+  .project {
+    padding-left: 22px;
+    padding-right: 22px;
+    margin-bottom: 60px;
+  }
+}
 
 @media(max-width: 991.98px) {
   .header {
@@ -294,6 +339,14 @@ button:focus {
   transition: 0.3s;
 }
 
+@media(max-width: 992.98px) {
+  .footer {
+    .navbar {
+      margin-top: 33px;
+    }
+  }
+}
+
 @media(max-width: 575.98px) {
   .site-title {
     font-size: 25px;
@@ -329,9 +382,9 @@ button:focus {
   }
 
   .projects {
-    margin-top: 40px;
+    margin-top: 30px;
     .project {
-      margin-bottom: 20px;
+      margin-bottom: 50px;
     }
   }
 
@@ -339,7 +392,6 @@ button:focus {
     padding-top: 90px;
     padding-bottom: 0;
     .navbar {
-      margin-top: 40px;
       .nav-item {
         margin: 0 10px;
       }
@@ -348,5 +400,16 @@ button:focus {
         font-weight: 500;
       }
     }
+  }
+}
+
+.title {
+  color: #000;
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 45px;
+  @media(max-width: 575.98px) {
+    font-size: 25px;
+    line-height: 36px;
   }
 }

@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Levan K.`,
+    twitterHandle: '@levanisart',
     occupation: `UI/UX Product Designer & Front-end Developer`,
-    author: `@gatsbyjs`,
+    url: `https://levanisart.com`,
+    image: `/src/images/levanisart.png`,
+    author: `Levani`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -28,12 +31,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Levan K. Portfolio`,
+        short_name: `Portfolio`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        background_color: `#000`,
+        theme_color: `#000`,
+        display: `minimal-ui`
         // icon: `src/images/gatsby-icon.png`
       },
     },
