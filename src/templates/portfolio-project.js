@@ -23,9 +23,15 @@ const ProjectDescription = styled.div`
   line-height: 29px;
   h2 {
     text-align: center;
+    @media (max-width: 575.98px) {
+      font-size: 25px;
+    }
   }
   h4 {
     font-weight: 400;
+    @media (max-width: 575.98px) {
+      font-size: 18px;
+    }
   }
 `;
 
@@ -166,8 +172,9 @@ export default ({ data, pageContext }) => {
           )}
         </div>
         <div className="my-4 my-lg-5 pt-4">
-          {/* <Img className="img-fluid" sizes={project.frontmatter.featuredImage.childImageSharp.sizes} /> */}
-          <img className="img-fluid" src={project.frontmatter.featuredImage.childImageSharp.sizes.originalImg} alt="" />
+          <a href={project.frontmatter.featuredImage.childImageSharp.sizes.originalImg} target="_blank" rel="noopener noreferrer">
+            <img className="img-fluid" src={project.frontmatter.featuredImage.childImageSharp.sizes.originalImg} alt="" />
+          </a>
         </div>
 
         <ProjectDescription dangerouslySetInnerHTML={{ __html: project.html }}></ProjectDescription>
