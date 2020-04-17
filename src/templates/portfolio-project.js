@@ -23,7 +23,7 @@ const ProjectDescription = styled.div`
   line-height: 29px;
   h2 {
     text-align: center;
-    @media (max-width: 575.98px) {
+    @media (max-width: 767.98px) {
       font-size: 25px;
     }
   }
