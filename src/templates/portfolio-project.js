@@ -32,6 +32,13 @@ const ProjectDetails = styled.div`
     width: 100%;
     margin: 15px 0;
   }
+  a {
+    color: #000;
+    &:hover {
+      color: #000;
+      text-decoration: none;
+    }
+  }
 `;
 
 const ProjectDetailsTitle = styled.span`
@@ -110,7 +117,12 @@ export default ({ data, pageContext }) => {
           {project.frontmatter.client && (
             <ProjectDetails>
               <ProjectDetailsTitle>Client</ProjectDetailsTitle>
-              <ProjectDetailsDescription>{project.frontmatter.client}</ProjectDetailsDescription>
+              {project.frontmatter.projectLink ? 
+                <a rel="noopener noreferrer" target="_blank" href={project.frontmatter.projectLink}>
+                  <ProjectDetailsDescription>{project.frontmatter.client}</ProjectDetailsDescription>
+                </a>
+                : <ProjectDetailsDescription>{project.frontmatter.client}</ProjectDetailsDescription>
+              }
             </ProjectDetails>
           )}
           {project.frontmatter.date && (
