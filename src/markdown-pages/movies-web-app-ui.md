@@ -4,7 +4,7 @@ description: null
 date: "2019-11-17"
 category: "UI/UX Design"
 client: null
-featuredImage: "../images/movies-web-app.png"
+featuredImage: "../images/projects/movies-web-app.png"
 sharebuttons: true
 projectLink: "https://dribbble.com/shots/8262344-Movies-Web-App-UI"
 ---

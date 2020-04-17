@@ -9,10 +9,9 @@ import { Link } from 'gatsby';
 const ProjectTitle = styled.h1`
   color: #000;
   font-size: 29px;
-  font-weight: 400;
+  font-weight: 500;
   @media(max-width: 575.98px) {
     font-size: 25px;
-    font-weight: 500;
   }
 `;
 
@@ -22,11 +21,18 @@ const ProjectDescription = styled.div`
   font-size: 15px;
   font-weight: 300;
   line-height: 29px;
+  h2 {
+    text-align: center;
+  }
+  h4 {
+    font-weight: 400;
+  }
 `;
 
 const ProjectDetails = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   width: 20%;
   @media(max-width: 991.98px) {
     width: 100%;
@@ -36,7 +42,6 @@ const ProjectDetails = styled.div`
     color: #000;
     &:hover {
       color: #000;
-      text-decoration: none;
     }
   }
 `;
@@ -160,7 +165,7 @@ export default ({ data, pageContext }) => {
             </ProjectDetails>
           )}
         </div>
-        <div className="mt-4 mt-lg-5 pt-4">
+        <div className="my-4 my-lg-5 pt-4">
           {/* <Img className="img-fluid" sizes={project.frontmatter.featuredImage.childImageSharp.sizes} /> */}
           <img className="img-fluid" src={project.frontmatter.featuredImage.childImageSharp.sizes.originalImg} alt="" />
         </div>
