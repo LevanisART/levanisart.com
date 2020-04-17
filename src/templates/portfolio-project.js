@@ -29,7 +29,7 @@ const ProjectDescription = styled.div`
   }
   h4 {
     font-weight: 400;
-    @media (max-width: 575.98px) {
+    @media (max-width: 767.98px) {
       font-size: 18px;
     }
   }
