@@ -18,11 +18,15 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return graphql(`
     {
-      allMarkdownRemark {
+      allMarkdownRemark (sort: {order: ASC, fields: [frontmatter___date]})
+      {
         edges {
           node {
             fields {
               slug
+            }
+            frontmatter {
+              title
             }
           }
         }
@@ -33,12 +37,16 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    result.data.allMarkdownRemark.edges.forEach(({node}) => {
+    const projects = result.data.allMarkdownRemark.edges;
+
+    projects.forEach(({node}, index) => {
       createPage({
         path: node.fields.slug,
         component: path.resolve(`./src/templates/portfolio-project.js`),
         context: {
-          slug: node.fields.slug
+          slug: node.fields.slug,
+          prev: index === 0 ? null : projects[index - 1].node,
+          next: index === (projects.length - 1) ? null : projects[index + 1].node
         },
       })
     })
