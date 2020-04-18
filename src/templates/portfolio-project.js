@@ -27,11 +27,21 @@ const ProjectDescription = styled.div`
       font-size: 25px;
     }
   }
+  h3 {
+    font-size: 22px;
+    font-weight: 600;
+    @media (max-width: 767.98px) {
+      font-size: 18px;
+    }
+  }
   h4 {
     font-weight: 400;
     @media (max-width: 767.98px) {
       font-size: 18px;
     }
+  }
+  p {
+    margin: 5px 0;
   }
 `;
 

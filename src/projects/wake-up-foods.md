@@ -11,6 +11,17 @@ projectLink: "https://wakeupfoods.com/"
 
 <br />
 
+### Project Goal
+The goal was to build the best customer experience for everyone who wants to buy waffles.
+<br />
+<br />
+
+### Solution
+I worked to improve the look, feel and functionality of the website. I used a complete range of fidelity to support decision-making including sketches, user flows, wireframes, mockups and prototypes.
+<br />
+<br />
+<br />
+
 ## Wireframes
 <br />
 
