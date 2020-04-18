@@ -28,7 +28,7 @@ I worked to improve the look, feel and functionality of the website. I used a co
 #### Home Page
 <br />
 
-![](../images/projects/wake-up-foods/home-page-wireframe.png)
+![Home Page Wireframe](../images/projects/wake-up-foods/home-page-wireframe.png)
 <br />
 <br />
 <br />
@@ -36,7 +36,7 @@ I worked to improve the look, feel and functionality of the website. I used a co
 #### Product Page
 <br />
 
-![](../images/projects/wake-up-foods/product-page-wireframe.png)
+![Product Page Wireframe](../images/projects/wake-up-foods/product-page-wireframe.png)
 <br />
 <br />
 <br />
@@ -47,7 +47,7 @@ I worked to improve the look, feel and functionality of the website. I used a co
 #### Home Page
 <br />
 
-![](../images/projects/wake-up-foods/home-page.png)
+![Home Page](../images/projects/wake-up-foods/home-page.png)
 <br />
 <br />
 <br />
@@ -55,4 +55,4 @@ I worked to improve the look, feel and functionality of the website. I used a co
 #### Product Page
 <br />
 
-![](../images/projects/wake-up-foods/product-page.png)
+![Product Page](../images/projects/wake-up-foods/product-page.png)
