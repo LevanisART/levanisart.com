@@ -255,6 +255,12 @@ textarea {
 }
 
 .category .btn {
+  @media(max-width: 575.95px) {
+    width: 100%;
+    text-align: left;
+    padding: 12px 18px !important;
+    margin-bottom: 10px;
+  }
   color: #6e6d7a;
   &.active {
     background: rgba(13,12,34,0.05);
@@ -270,7 +276,7 @@ textarea {
 }
 
 .projects {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .projects-row {

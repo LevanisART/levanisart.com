@@ -32,7 +32,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title="UI/UX Design Projects" />
-      <h2 className="job-title">{data.site.siteMetadata.occupation}</h2>
+      <h2 className="title pb-3">Front-end Development Projects</h2>
       <div className="projects row projects-row">
         {
           projects.map(({node}) => (

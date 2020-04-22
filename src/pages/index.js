@@ -50,7 +50,7 @@ export default ({ data }) => {
       <SEO title="Portfolio" />
       <h2 className="job-title">{data.site.siteMetadata.occupation}</h2>
 
-      <div className="projectCategories d-flex flex-wrap mt-5 pt-4">
+      <div className="projectCategories d-flex flex-wrap flex-column flex-sm-row mt-5 pt-sm-4">
         {
           categories.map((category, id) => {
             return (

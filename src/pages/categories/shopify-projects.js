@@ -2,8 +2,8 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
 import Img from "gatsby-image"
 
 const ProjectLink = styled(Link)`
@@ -32,7 +32,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Shopify Projects" />
-      <h2 className="job-title">{data.site.siteMetadata.occupation}</h2>
+      <h2 className="title pb-3">Shopify Projects</h2>
       <div className="projects row projects-row">
         {
           projects.map(({node}) => (
