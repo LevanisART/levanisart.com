@@ -54,14 +54,10 @@ export default ({ data }) => {
         {
           categories.map((category, id) => {
             return (
-              <div
-                key={id}
-                className="category mr-3"
-                onClick={() => changeCategory(category)}
-              >
+              <div key={id} className="category mr-3">
                 <button 
+                  onClick={() => changeCategory(category)}
                   className={`btn py-2 px-3 ${state.activeCategory === category ? "active" : ""}`}
-                  onClick={() => { setState({activeCategory: category}) }} 
                 >{category}</button>
               </div>
             )
