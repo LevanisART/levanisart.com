@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 
@@ -27,53 +27,17 @@ const ProjectTitle = styled.h3`
   }
 `;
 
-
-
 export default ({ data }) => {
   const projects = data.allMarkdownRemark.edges;
-  const categories = ["All", "UI/UX Design", "Front-end Development"];
-
-  const [state, setState] = useState({
-    filteredData: projects
-  });
-
-  const [activeCategory, setCategory] = useState({
-    activeCategory: "All"
-  });
-
-  const changeCategory = (category) => {
-    const filteredData = data.allMarkdownRemark.edges.filter(({node}) => node.frontmatter.category.includes(category));
-    setState({ filteredData })
-  }
-
-  const { filteredData } = state
-  const filteredProjects = activeCategory !== "All" ? filteredData : projects
-
   return (
     <Layout>
-      <SEO title="Portfolio" />
+      <SEO title="Shopify Projects" />
       <h2 className="job-title">{data.site.siteMetadata.occupation}</h2>
-
-      <div className="projectCategories d-flex flex-wrap mt-5 pt-4">
-        {categories.map(category => 
-          <div
-            key={category} 
-            className="category mr-3"
-            onClick={() => changeCategory(category)}
-          >
-            <button 
-              className={`btn py-2 px-3 ${activeCategory === category ? "active" : ""}`}
-              onClick={() => { setCategory(category) }} 
-            >{category}</button>
-          </div>
-        )}
-      </div>
-      
       <div className="projects row projects-row">
         {
-          filteredProjects.map(({node}) => (
+          projects.map(({node}) => (
             <div key={node.id} className="project col-md-6">
-              <div className="d-flex flex-column">
+              <div className="d-flex flex-column">              
                 <ProjectLink to={node.fields.slug}>
                   <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
                   <ProjectTitle className="mt-3 pt-1 align-self-center text-center">{ node.frontmatter.title }</ProjectTitle>
@@ -87,7 +51,6 @@ export default ({ data }) => {
   )
 }
 
-
 export const query = graphql`
   query {
     site {
@@ -95,7 +58,7 @@ export const query = graphql`
         occupation
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { category: { in: ["UI/UX Design & Front-end Development", "Front-end Development"] } } }) {
       totalCount
       edges {
         node {

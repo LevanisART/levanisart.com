@@ -254,8 +254,23 @@ textarea {
   }
 }
 
+.category .btn {
+  color: #6e6d7a;
+  &.active {
+    background: rgba(13,12,34,0.05);
+    border-radius: 8px;
+    font-weight: 500;
+  }
+  &:hover, &.active {
+    color: #0d0c22;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
 .projects {
-  margin-top: 70px;
+  margin-top: 30px;
 }
 
 .projects-row {
