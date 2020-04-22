@@ -28,26 +28,22 @@ const ProjectTitle = styled.h3`
 `;
 
 
-
 export default ({ data }) => {
   const projects = data.allMarkdownRemark.edges;
   const categories = ["All", "UI/UX Design", "Front-end Development"];
 
   const [state, setState] = useState({
-    filteredData: projects
-  });
-
-  const [activeCategory, setCategory] = useState({
+    filteredData: projects,
     activeCategory: "All"
   });
 
   const changeCategory = (category) => {
     const filteredData = data.allMarkdownRemark.edges.filter(({node}) => node.frontmatter.category.includes(category));
-    setState({ filteredData })
+    const activeCategory = category;
+    setState({ filteredData, activeCategory })
   }
 
-  const { filteredData } = state
-  const filteredProjects = activeCategory !== "All" ? filteredData : projects
+  const filteredProjects = state.activeCategory !== "All" ? state.filteredData : projects
 
   return (
     <Layout>
@@ -55,18 +51,22 @@ export default ({ data }) => {
       <h2 className="job-title">{data.site.siteMetadata.occupation}</h2>
 
       <div className="projectCategories d-flex flex-wrap mt-5 pt-4">
-        {categories.map(category => 
-          <div
-            key={category} 
-            className="category mr-3"
-            onClick={() => changeCategory(category)}
-          >
-            <button 
-              className={`btn py-2 px-3 ${activeCategory === category ? "active" : ""}`}
-              onClick={() => { setCategory(category) }} 
-            >{category}</button>
-          </div>
-        )}
+        {
+          categories.map((category, id) => {
+            return (
+              <div
+                key={id}
+                className="category mr-3"
+                onClick={() => changeCategory(category)}
+              >
+                <button 
+                  className={`btn py-2 px-3 ${state.activeCategory === category ? "active" : ""}`}
+                  onClick={() => { setState({activeCategory: category}) }} 
+                >{category}</button>
+              </div>
+            )
+          })
+        }
       </div>
       
       <div className="projects row projects-row">
@@ -86,7 +86,6 @@ export default ({ data }) => {
     </Layout>
   )
 }
-
 
 export const query = graphql`
   query {
