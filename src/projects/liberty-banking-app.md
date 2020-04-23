@@ -6,7 +6,11 @@ category: "UI/UX Design"
 client: null
 clientWebsite: null
 platform: null
-featuredImage: "../images/projects/liberty-banking-app.png"
+featuredImage: "../images/projects/liberty-banking-app/liberty-banking-app.png"
 sharebuttons: true
 projectLink: "https://dribbble.com/shots/10739025-Liberty-Banking-App-Redesign"
 ---
+
+<br />
+
+![Screens 2](../images/projects/liberty-banking-app/liberty-banking-app-screens2.png)
