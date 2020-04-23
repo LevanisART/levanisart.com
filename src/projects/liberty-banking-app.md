@@ -4,6 +4,8 @@ description: null
 date: "2020-03-13"
 category: "UI/UX Design"
 client: null
+clientWebsite: null
+platform: null
 featuredImage: "../images/projects/liberty-banking-app.png"
 sharebuttons: true
 projectLink: "https://dribbble.com/shots/10739025-Liberty-Banking-App-Redesign"

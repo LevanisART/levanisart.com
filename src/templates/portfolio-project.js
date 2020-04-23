@@ -139,8 +139,8 @@ export default ({ data, pageContext }) => {
           {project.frontmatter.client && (
             <ProjectDetails>
               <ProjectDetailsTitle>Client</ProjectDetailsTitle>
-              {project.frontmatter.projectLink ? 
-                <a rel="noopener noreferrer" target="_blank" href={project.frontmatter.projectLink}>
+              {project.frontmatter.clientWebsite ? 
+                <a rel="noopener noreferrer" target="_blank" href={project.frontmatter.clientWebsite}>
                   <ProjectDetailsDescription>{project.frontmatter.client}</ProjectDetailsDescription>
                 </a>
                 : <ProjectDetailsDescription>{project.frontmatter.client}</ProjectDetailsDescription>
@@ -227,6 +227,7 @@ export const query = graphql`
         title
         description
         client
+        clientWebsite
         date
         category
         sharebuttons

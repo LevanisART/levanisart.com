@@ -1,9 +1,11 @@
 ---
 title: "Wake Up Foods"
-description: "Wake Up Foods is a website where people can buy ridiculously delicious waffles. It sounds simple and is really simple just the way a sharing economy venture should be. However, it does stand out from the crowd by making every aspect of e-shopping better. Creating this website, I aimed at communicating the simplicity, speed, and elegancy of modern shopping that only requires an internet connection."
+description: "Wake Up Foods is a shopify website where people can buy ridiculously delicious waffles. It sounds simple and is really simple just the way a sharing economy venture should be. However, it does stand out from the crowd by making every aspect of e-shopping better. Creating this website, I aimed at communicating the simplicity, speed, and elegancy of modern shopping that only requires an internet connection."
 date: "2020-03-10"
 category: "UI/UX Design & Front-end Development"
 client: "Wakeupfoods.com"
+clientWebsite: "https://wakeupfoods.com/"
+platform: "Shopify"
 featuredImage: "../images/projects/wake-up-foods/featured.png"
 sharebuttons: true
 projectLink: "https://wakeupfoods.com/"

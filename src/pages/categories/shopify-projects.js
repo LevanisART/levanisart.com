@@ -58,7 +58,7 @@ export const query = graphql`
         occupation
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { category: { in: ["UI/UX Design & Front-end Development", "Front-end Development"] } } }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { platform: { in: ["Shopify"] } } }) {
       totalCount
       edges {
         node {
