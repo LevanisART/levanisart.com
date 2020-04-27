@@ -47,7 +47,7 @@ module.exports = {
         name: `Levan K. Portfolio`,
         short_name: `Portfolio`,
         start_url: `/`,
-        background_color: `#000`,
+        background_color: `#FFF`,
         theme_color: `#000`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`
