@@ -43,7 +43,9 @@ export default ({ data }) => {
     setState({ filteredData, activeCategory })
   }
 
-  const filteredProjects = state.activeCategory !== "All" ? state.filteredData : projects
+  const filteredProjects = state.activeCategory !== "All" ? state.filteredData : projects;
+  const videos = ''
+  console.log(data)
 
   return (
     <Layout>
@@ -71,7 +73,13 @@ export default ({ data }) => {
             <div key={node.id} className="project col-md-6">
               <div className="d-flex flex-column">
                 <ProjectLink to={node.fields.slug}>
-                  <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
+                  {
+                    node.frontmatter.featuredVideo == null ? <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} /> 
+                    : 
+                    <video width="100%" autoPlay muted loop>
+                      <source src={node.frontmatter.featuredVideo.publicURL} type="video/mp4" />
+                    </video>
+                  }
                   <ProjectTitle className="mt-3 pt-1 align-self-center text-center">{ node.frontmatter.title }</ProjectTitle>
                 </ProjectLink>
               </div>
@@ -83,7 +91,7 @@ export default ({ data }) => {
   )
 }
 
-export const query = graphql`
+export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
@@ -105,6 +113,10 @@ export const query = graphql`
                   ...GatsbyImageSharpSizes
                 }
               }
+            }
+
+            featuredVideo {
+              publicURL
             }
           }
           fields {

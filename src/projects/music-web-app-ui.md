@@ -7,6 +7,7 @@ client: null
 clientWebsite: null
 platform: null
 featuredImage: "../images/projects/music-web-app.png"
+featuredVideo: null
 sharebuttons: true
 projectLink: "https://dribbble.com/shots/7687430-Music-Web-App-UI"
 ---

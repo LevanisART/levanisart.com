@@ -7,6 +7,7 @@ client: Ecom Experts
 clientWebsite: "https://ecomexperts.io/"
 platform: "Shopify"
 featuredImage: "../images/projects/website-speed-test/featured.png"
+featuredVideo: null
 sharebuttons: true
 projectLink: "https://testmystorespeed.com"
 ---

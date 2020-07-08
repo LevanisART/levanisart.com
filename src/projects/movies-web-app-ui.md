@@ -7,6 +7,7 @@ client: null
 clientWebsite: null
 platform: null
 featuredImage: "../images/projects/movies-web-app.png"
+featuredVideo: null
 sharebuttons: true
 projectLink: "https://dribbble.com/shots/8262344-Movies-Web-App-UI"
 ---

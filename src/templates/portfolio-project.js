@@ -72,6 +72,7 @@ const ProjectDetailsDescription = styled.span`
   margin-top: 4px;
   font-size: 14px;
   font-weight: 300;
+  white-space: pre-wrap;
 `;
 
 const ViewProject = styled.a`
@@ -183,9 +184,16 @@ export default ({ data, pageContext }) => {
           )}
         </div>
         <div className="my-4 my-lg-5 pt-4">
-          <a href={project.frontmatter.featuredImage.childImageSharp.sizes.originalImg} target="_blank" rel="noopener noreferrer">
-            <img className="img-fluid" src={project.frontmatter.featuredImage.childImageSharp.sizes.originalImg} alt="" />
-          </a>
+          {
+            project.frontmatter.featuredVideo == null ? 
+            <a href={project.frontmatter.featuredImage.childImageSharp.sizes.originalImg} target="_blank" rel="noopener noreferrer">
+              <img className="img-fluid" src={project.frontmatter.featuredImage.childImageSharp.sizes.originalImg} alt="" />
+            </a>
+            :
+            <video width="100%" autoPlay muted loop>
+              <source src={project.frontmatter.featuredVideo.publicURL} type="video/mp4" />
+            </video>
+          }
         </div>
 
         <ProjectDescription dangerouslySetInnerHTML={{ __html: project.html }}></ProjectDescription>
@@ -238,6 +246,9 @@ export const query = graphql`
               originalImg
             }
           }
+        }
+        featuredVideo {
+          publicURL
         }
       }
       fields {

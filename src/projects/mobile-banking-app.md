@@ -7,6 +7,7 @@ client: null
 clientWebsite: null
 platform: null
 featuredImage: "../images/projects/mobile-banking-app.png"
+featuredVideo: null
 sharebuttons: true
 projectLink: "https://dribbble.com/shots/8514839-Mobile-Banking-App"
 ---

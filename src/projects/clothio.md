@@ -7,6 +7,7 @@ client: "Clothio"
 clientWebsite: "https://clothio.herokuapp.com/"
 platform: null
 featuredImage: "../images/projects/clothio/featured.png"
+featuredVideo: null
 sharebuttons: true
 projectLink: "https://clothio.herokuapp.com/"
 ---
