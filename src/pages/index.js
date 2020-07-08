@@ -44,8 +44,6 @@ export default ({ data }) => {
   }
 
   const filteredProjects = state.activeCategory !== "All" ? state.filteredData : projects;
-  const videos = ''
-  console.log(data)
 
   return (
     <Layout>
