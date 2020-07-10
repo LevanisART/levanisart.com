@@ -3,7 +3,7 @@ title: "Us+ Healthcare Products"
 description: null
 date: "2020-07-08"
 category: "UI/UX Design,\nFront-end Development"
-client: "US+ Health"
+client: "US+ Healthcare"
 clientWebsite: null
 platform: 'Shopify'
 featuredImage: "../images/projects/us-plus-health/featured.png"
