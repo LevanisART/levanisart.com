@@ -7,7 +7,7 @@ client: "US+ Healthcare"
 clientWebsite: null
 platform: 'Shopify'
 featuredImage: "../images/projects/us-plus-health/featured.png"
-featuredVideo: "../images/projects/us-plus-health/video.mp4"
+featuredVideo: null
 sharebuttons: true
 projectLink: null
 ---

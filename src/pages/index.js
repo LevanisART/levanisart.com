@@ -71,13 +71,14 @@ export default ({ data }) => {
             <div key={node.id} className="project col-md-6">
               <div className="d-flex flex-column">
                 <ProjectLink to={node.fields.slug}>
-                  {
+                  {/* {
                     node.frontmatter.featuredVideo == null ? <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} /> 
                     : 
                     <video width="100%" autoPlay muted loop>
                       <source src={node.frontmatter.featuredVideo.publicURL} type="video/mp4" />
                     </video>
-                  }
+                  } */}
+                  <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} /> 
                   <ProjectTitle className="mt-3 pt-1 align-self-center text-center">{ node.frontmatter.title }</ProjectTitle>
                 </ProjectLink>
               </div>
@@ -113,9 +114,9 @@ export const pageQuery = graphql`
               }
             }
 
-            featuredVideo {
-              publicURL
-            }
+            # featuredVideo {
+            #   publicURL
+            # }
           }
           fields {
             slug
