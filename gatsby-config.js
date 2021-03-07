@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Levan K.`,
     twitterHandle: '@levanisart',
-    occupation: `UI/UX Product Designer & Front-end Developer specializing in Shopify`,
+    occupation: `UI/UX Designer & Front-end Developer specializing in Shopify`,
     url: `https://levanisart.com`,
     author: `Levani`,
     image: `https://i.ibb.co/wBnvggV/LA.png`
