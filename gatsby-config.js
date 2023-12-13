@@ -60,6 +60,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-well-known`
+    {
+      resolve: `gatsby-plugin-well-known`,
+      options: {
+        source: './src/well-known',
+      }
+    }
   ],
 }
