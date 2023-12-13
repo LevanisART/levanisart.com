@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const ProjectLink = styled(Link)`
   text-decoration: none;
@@ -68,17 +68,18 @@ export default ({ data }) => {
       <div className="projects row projects-row">
         {
           filteredProjects.map(({node}) => (
+            console.log(node),
             <div key={node.id} className="project col-md-6">
               <div className="d-flex flex-column">
                 <ProjectLink to={node.fields.slug}>
                   {/* {
-                    node.frontmatter.featuredVideo == null ? <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} /> 
+                    node.frontmatter.featuredVideo == null ? <GatsbyImage sizes={node.frontmatter.featuredImage.childImageSharp.sizes} /> 
                     : 
                     <video width="100%" autoPlay muted loop>
                       <source src={node.frontmatter.featuredVideo.publicURL} type="video/mp4" />
                     </video>
                   } */}
-                  <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} /> 
+                  <GatsbyImage image={node.frontmatter.featuredImage.childImageSharp.gatsbyImageData} /> 
                   <ProjectTitle className="mt-3 pt-1 align-self-center text-center">{ node.frontmatter.title }</ProjectTitle>
                 </ProjectLink>
               </div>
@@ -108,9 +109,7 @@ export const pageQuery = graphql`
             date(formatString: "DD MMMM, YYYY")
             featuredImage {
               childImageSharp {
-                sizes(quality: 100) {
-                  ...GatsbyImageSharpSizes
-                }
+                gatsbyImageData(quality: 100)
               }
             }
 

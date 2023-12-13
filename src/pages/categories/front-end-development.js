@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const ProjectLink = styled(Link)`
   text-decoration: none;
@@ -39,7 +39,7 @@ export default ({ data }) => {
             <div key={node.id} className="project col-md-6">
               <div className="d-flex flex-column">              
                 <ProjectLink to={node.fields.slug}>
-                  <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
+                  <GatsbyImage image={node.frontmatter.featuredImage.childImageSharp.gatsbyImageData} /> 
                   <ProjectTitle className="mt-3 pt-1 align-self-center text-center">{ node.frontmatter.title }</ProjectTitle>
                 </ProjectLink>
               </div>
@@ -69,9 +69,7 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
             featuredImage {
               childImageSharp {
-                sizes(quality: 100) {
-                  ...GatsbyImageSharpSizes
-                }
+                gatsbyImageData(quality: 100)
               }
             }
           }

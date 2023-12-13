@@ -115,7 +115,9 @@ const ItemPagination = styled(Link)`
 
 export default ({ data, pageContext }) => {
   const project = data.markdownRemark;
-  const image = project.frontmatter.featuredImage.childImageSharp.sizes.originalImg;
+  console.log('projectt', project)
+  const image = project.frontmatter.featuredImage.childImageSharp.fluid.originalImg;
+  console.log(image)
   const { next, previous } = pageContext;
 
   const {
@@ -186,16 +188,16 @@ export default ({ data, pageContext }) => {
         <div className="my-4 my-lg-5 pt-4">
           {/* {
             project.frontmatter.featuredVideo == null ? 
-            <a href={project.frontmatter.featuredImage.childImageSharp.sizes.originalImg} target="_blank" rel="noopener noreferrer">
-              <img className="img-fluid" src={project.frontmatter.featuredImage.childImageSharp.sizes.originalImg} alt="" />
+            <a href={project.frontmatter.featuredImage.childImageSharp.fluid.originalimg} target="_blank" rel="noopener noreferrer">
+              <img className="img-fluid" src={project.frontmatter.featuredImage.childImageSharp.fluid.originalimg} alt="" />
             </a>
             :
             <video width="100%" autoPlay muted loop>
               <source src={project.frontmatter.featuredVideo.publicURL} type="video/mp4" />
             </video>
           } */}
-          <a href={project.frontmatter.featuredImage.childImageSharp.sizes.originalImg} target="_blank" rel="noopener noreferrer">
-            <img className="img-fluid" src={project.frontmatter.featuredImage.childImageSharp.sizes.originalImg} alt="" />
+          <a href={image} target="_blank" rel="noopener noreferrer">
+            <img className="img-fluid" src={image} alt="" />
           </a>
         </div>
 
@@ -245,7 +247,7 @@ export const query = graphql`
         projectLink
         featuredImage {
           childImageSharp {
-            sizes(quality: 100) {
+            fluid(quality: 100) {
               originalImg
             }
           }
