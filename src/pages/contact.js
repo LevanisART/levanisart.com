@@ -11,13 +11,13 @@ const Contact = () => (
       <div className="email font-weight-normal mb-4">
         <span>Email - <a href="mailto:levani.qotolashvili@gmail.com">levani.qotolashvili@gmail.com</a></span>
       </div>
-      <form action="https://formspree.io/levani.qotolashvili@gmail.com" method="POST">
+      <form action="https://formspree.io/f/manwqway" method="POST">
         <div className="d-flex flex-wrap contact-info">
           <div className="form-input col-lg-6 col-12 pr-0 pl-0 pr-lg-2">
             <input type="text" placeholder="Name" name="name" />
           </div>
           <div className="form-input col-lg-6 col-12 pl-0 pr-0 pl-lg-2">
-            <input type="email" placeholder="E-mail" name="_replyto" />
+            <input type="email" placeholder="E-mail" name="email" />
           </div>
         </div>
 
