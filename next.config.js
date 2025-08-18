@@ -1,18 +1,26 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['i.ibb.co'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.ibb.co',
+        port: '',
+        pathname: '/**',
+      },
+    ],
     formats: ['image/avif', 'image/webp'],
-    unoptimized: true, // Required for static export
+    unoptimized: false, // Allow Next.js image optimization for localhost
   },
   compiler: {
     styledComponents: true,
   },
   trailingSlash: false,
-  output: 'export',
-  distDir: 'out',
-  basePath: '',
-  assetPrefix: '',
+  // Remove static export configuration for localhost development
+  // output: 'export',
+  // distDir: 'out',
+  // basePath: '',
+  // assetPrefix: '',
 }
 
 module.exports = nextConfig
