@@ -9,7 +9,7 @@ platform: "Shopify"
 featuredImage: "../images/projects/wake-up-foods/featured.png"
 featuredVideo: null
 sharebuttons: true
-projectLink: "https://wakeupfoods.com/"
+projectLink: null
 ---
 
 <br />

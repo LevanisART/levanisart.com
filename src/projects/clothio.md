@@ -4,12 +4,12 @@ description: null
 date: "2020-04-24"
 category: "Front-end Development"
 client: "Clothio"
-clientWebsite: "https://clothio.herokuapp.com/"
+clientWebsite: null
 platform: null
 featuredImage: "../images/projects/clothio/featured.png"
 featuredVideo: null
 sharebuttons: true
-projectLink: "https://clothio.herokuapp.com/"
+projectLink: null
 ---
 
 <br />

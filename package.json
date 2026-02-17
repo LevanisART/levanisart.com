@@ -1,54 +1,43 @@
 {
-  "name": "portfolio",
-  "private": true,
-  "description": "Levan K. - Portfolio",
+  "name": "levanisart-portfolio",
   "version": "0.1.0",
+  "description": "Levan K. - Portfolio",
   "author": "Levan Kotolashvili <levani.qotolashvili@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export"
+  },
   "dependencies": {
-    "babel-plugin-styled-components": "^2.1.4",
-    "bootstrap": "^4.4.1",
-    "gatsby": "^5.12.12",
-    "gatsby-image": "^3.11.0",
-    "gatsby-plugin-google-analytics": "^5.12.0",
-    "gatsby-plugin-image": "^3.12.3",
-    "gatsby-plugin-manifest": "^5.12.3",
-    "gatsby-plugin-offline": "^6.12.3",
-    "gatsby-plugin-react-helmet": "^6.12.0",
-    "gatsby-plugin-sass": "^6.12.3",
-    "gatsby-plugin-sharp": "^5.12.3",
-    "gatsby-plugin-styled-components": "^6.12.0",
-    "gatsby-plugin-well-known": "^1.0.0",
-    "gatsby-remark-images": "^7.12.3",
-    "gatsby-source-filesystem": "^5.12.1",
-    "gatsby-telemetry": "^4.12.1",
-    "gatsby-transformer-remark": "^6.12.3",
-    "gatsby-transformer-sharp": "^5.12.3",
-    "node-sass": "^9.0.0",
-    "prop-types": "^15.8.1",
+    "bootstrap": "^5.3.7",
+    "gray-matter": "^4.0.3",
+    "next": "^14.0.4",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.9.1",
+    "react-bootstrap": "^2.10.10",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "react-share": "^5.0.3",
-    "styled-components": "^6.1.1"
+    "react-share": "^5.2.2",
+    "sass": "^1.69.0",
+    "sharp": "^0.33.1",
+    "styled-components": "^6.1.19"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "heroku-postbuild": "gatsby build",
-    "start": "gatsby serve",
-    "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "@types/node": "^20.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.4",
+    "prettier": "^3.6.2",
+    "@types/node": "^20.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/LevanisART/gatsby-portfolio"
-  }
+    "url": "https://github.com/LevanisART/levanisart-portfolio"
+  },
+  "keywords": [
+    "nextjs",
+    "portfolio",
+    "react"
+  ],
+  "license": "MIT"
 }

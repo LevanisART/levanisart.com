@@ -1,0 +1,16 @@
+{
+  "name": "Levan K. Portfolio",
+  "short_name": "Portfolio",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#FFF",
+  "theme_color": "#000",
+  "description": "Portfolio of Levan Kotolashvili - UX Engineer",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
