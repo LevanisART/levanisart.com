@@ -6,7 +6,7 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <div>
-      <h1 className="title">Let's work together</h1>
+      <h1 className="title">Let&#39;s work together</h1>
       <p className="mt-4">
         I&#39;m always open to discussing new opportunities and interesting
         projects.
