@@ -1,50 +1,57 @@
-'use client'
+"use client"
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react"
 import Link from "next/link"
-import { Navbar, Nav } from 'react-bootstrap'
-import Socials from './Socials'
+import { usePathname } from "next/navigation"
+import { Navbar, Nav } from "react-bootstrap"
+import Socials from "./Socials"
 
 const Navigation = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+  const pathname = usePathname()
+  const [navbarOpen, setNavbarOpen] = useState(false)
 
   const toggleNavbar = () => {
-    setNavbarOpen(!navbarOpen);
-  };
+    setNavbarOpen(!navbarOpen)
+  }
 
   const updateBodyStyle = () => {
-    setNavbarOpen(false);
-  };
+    setNavbarOpen(false)
+  }
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const body = document.querySelector('body');
-      const navbarbg = document.querySelector('.navbar-bg');
+    if (typeof window !== "undefined") {
+      const body = document.querySelector("body")
+      const navbarbg = document.querySelector(".navbar-bg")
 
       if (!navbarOpen) {
-        if (body) body.style.position = 'static';
+        if (body) body.style.position = "static"
         if (navbarbg) {
-          navbarbg.style.background = 'none';
-          navbarbg.style.visibility = 'hidden';
+          navbarbg.style.background = "none"
+          navbarbg.style.visibility = "hidden"
         }
       } else {
-        if (body) body.style.position = 'fixed';
+        if (body) body.style.position = "fixed"
         if (navbarbg) {
-          navbarbg.style.background = '#FFF';
-          navbarbg.style.visibility = 'visible';
+          navbarbg.style.background = "#FFF"
+          navbarbg.style.visibility = "visible"
         }
       }
     }
-  }, [navbarOpen]);
+  }, [navbarOpen])
 
   return (
     <div>
       <div className="navbar-bg"></div>
-      <Navbar collapseOnSelect expand="lg" className="p-0" expanded={navbarOpen}>
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        className="p-0"
+        expanded={navbarOpen}
+      >
         <div className="header-burger d-flex align-items-center">
-          <Navbar.Toggle 
-            aria-controls="responsive-navbar-nav" 
-            className={`header-burger-btn burger ${navbarOpen ? '' : 'collapsed'}`}
+          <Navbar.Toggle
+            aria-controls="responsive-navbar-nav"
+            className={`header-burger-btn burger ${navbarOpen ? "" : "collapsed"}`}
             onClick={toggleNavbar}
           >
             <div className="burger-box">
@@ -56,10 +63,22 @@ const Navigation = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
             <div className="nav-item">
-              <Link className="nav-link" href="/" onClick={updateBodyStyle}>Work</Link>
+              <Link
+                className={`nav-link${pathname === "/" || pathname.startsWith("/projects") ? " active" : ""}`}
+                href="/"
+                onClick={updateBodyStyle}
+              >
+                Work
+              </Link>
             </div>
             <div className="nav-item">
-              <Link className="nav-link" href="/contact" onClick={updateBodyStyle}>Contact</Link>
+              <Link
+                className={`nav-link${pathname === "/contact" ? " active" : ""}`}
+                href="/contact"
+                onClick={updateBodyStyle}
+              >
+                Contact
+              </Link>
             </div>
           </Nav>
           <Socials />
@@ -69,4 +88,4 @@ const Navigation = () => {
   )
 }
 
-export default Navigation;
+export default Navigation

@@ -1,6 +1,6 @@
 import React from "react"
-import Socials from './Socials'
-import { Navbar, Nav } from 'react-bootstrap'
+import Socials from "./Socials"
+import { Navbar, Nav } from "react-bootstrap"
 import Link from "next/link"
 
 const Footer = () => (
@@ -10,15 +10,18 @@ const Footer = () => (
     <Navbar className="p-0">
       <Nav className="mr-auto">
         <div className="nav-item">
-          <Link className="nav-link" href="/">Work</Link>
+          <Link className="nav-link" href="/">
+            Work
+          </Link>
         </div>
         <div className="nav-item">
-          <Link className="nav-link" href="/contact">Contact</Link>
+          <Link className="nav-link" href="/contact">
+            Contact
+          </Link>
         </div>
       </Nav>
     </Navbar>
-
   </footer>
 )
 
-export default Footer;
+export default Footer

@@ -9,7 +9,7 @@ platform: 'Shopify'
 featuredImage: "../images/projects/revelwear/featured.png"
 featuredVideo: null
 sharebuttons: true
-projectLink: "https://revelwear.com"
+projectLink: null
 ---
 
 <br />
