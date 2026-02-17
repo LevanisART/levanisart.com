@@ -35,8 +35,11 @@ yarn-error.log*
 next-env.d.ts
 
 # Legacy Gatsby files
-/public
 /.cache
 /gatsby-*.js
+/public/page-data
+/public/static
+/public/~partytown
+/public/manifest.webmanifest
 /static.json
 /app.json
