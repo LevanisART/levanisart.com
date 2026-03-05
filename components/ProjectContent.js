@@ -61,27 +61,41 @@ export default function ProjectContent({ content }) {
           let src = srcMatch[1]
 
           // Check if the src is an external URL
-          const isExternal = src.startsWith("http://") || src.startsWith("https://");
+          const isExternal =
+            src.startsWith("http://") || src.startsWith("https://")
 
-          // Convert relative paths to absolute paths, but only for internal images
-          if (!isExternal) {
+          if (isExternal) {
+            elements.push(
+              <img
+                key={key++}
+                src={src}
+                alt={alt}
+                style={{ width: "100%", height: "auto", marginBottom: "2rem" }}
+              />
+            )
+          } else {
+            // Convert relative paths to absolute paths for internal images
             if (src.startsWith("../")) {
               src = src.replace("../", "/")
             } else if (!src.startsWith("/")) {
               src = `/${src}`
             }
-          }
 
-          elements.push(
-            <Image
-              key={key++}
-              src={src}
-              alt={alt}
-              width={800}
-              height={600}
-              style={{ width: "100%", height: "auto", marginBottom: "2rem" }}
-            />
-          )
+            elements.push(
+              <Image
+                key={key++}
+                src={src}
+                alt={alt}
+                width={800}
+                height={600}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  marginBottom: "2rem",
+                }}
+              />
+            )
+          }
         }
         continue
       }
