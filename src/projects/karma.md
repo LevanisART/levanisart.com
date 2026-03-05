@@ -17,7 +17,7 @@ projectLink: "https://themes.shopify.com/themes/highlight/presets/highlight"
 ## Home Page
 <br />
 
-![Home Page](../images/projects/karma/home.png)
+![Home Page](https://i.ibb.co/wZC0Cpkx/home.png)
 <br />
 <br />
 <br />
