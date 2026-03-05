@@ -17,7 +17,7 @@ projectLink: "https://themes.shopify.com/themes/highlight/presets/highlight"
 ## Home Page
 <br />
 
-![Home Page](https://i.ibb.co/wZC0Cpkx/home.png)
+![Home Page](https://i.ibb.co/HLYFYGSk/home.png)
 <br />
 <br />
 <br />
