@@ -70,12 +70,6 @@ export default function ProjectPage({ params }) {
           </div>
         )}
 
-        {project.date && (
-          <div className="project-details-item">
-            <span className="project-details-title">Project Date</span>
-            <span className="project-details-description">{project.date}</span>
-          </div>
-        )}
 
         {project.projectLink && (
           <div className="project-details-item ms-lg-auto align-items-lg-end">

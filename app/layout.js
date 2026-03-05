@@ -33,7 +33,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                  for (let r of registrations) { r.unregister(); }
+                });
+              }
+            `,
+          }}
+        />
+      </body>
     </html>
   )
 }
