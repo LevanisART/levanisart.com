@@ -1,122 +1,162 @@
 export const metadata = {
   title: "Resume - Levan K.",
-  description: "Resume of Levan Kotolashvili - UX Engineer",
+  description: "Resume of Levan Kotolashvili - Senior UX Engineer",
 }
 
 export default function ResumePage() {
   return (
     <div className="resume">
-      <span className="resume-name">
-        <a href="/">Levan Kotolashvili</a>
-      </span>
-      &nbsp;&nbsp;&nbsp;
-      <span className="resume-contact">
-        levankotolashvili@gmail.com&nbsp;&nbsp;&nbsp;
-        <a href="/">Portfolio</a>&nbsp;&nbsp;&nbsp;
-        <a href="https://github.com/LevanisART">GitHub</a>&nbsp;&nbsp;&nbsp;
-        <a href="https://linkedin.com/in/levan-kotolashvili">LinkedIn</a>
-      </span>
-      <h2>Summary</h2>
-      <p>
-        UX Engineer who tries to transform the newest technologies into products
-        that serve humanity and benefit this world. Combining coding and
-        artistic talents, working relentlessly to solve problems and enhance
-        experiences.
+      <header className="resume-header">
+        <h1>
+          <a href="/">Levan Kotolashvili</a>
+        </h1>
+        <div className="resume-contact">
+          Email:{" "}
+          <a href="mailto:levani.qotolashvili@gmail.com">
+            levani.qotolashvili@gmail.com
+          </a>
+          &nbsp;@&nbsp;
+          <a href="/">Portfolio</a>
+          &nbsp;@&nbsp;
+          <a href="https://github.com/LevanisART">GitHub</a>
+          &nbsp;@&nbsp;
+          <a href="https://linkedin.com/in/levan-kotolashvili">LinkedIn</a>
+        </div>
+      </header>
+      <p className="resume-summary">
+        Senior UX Engineer, bridging design and front-end engineering.
       </p>
+
       <h2>Work Experience</h2>
-      <p>
-        <span className="resume-position">UX Engineer</span>&nbsp;&nbsp;&nbsp;
-        <span className="resume-company">The Wander Club</span>
-        <br />
-        <span className="resume-date">September 2020 &ndash; April 2022</span>
-      </p>
+
+      <div className="resume-job">
+        <h3>
+          Senior UX Engineer @{" "}
+          <a href="https://thewanderclub.com">The Wander Club</a>
+        </h3>
+        <span className="resume-date">September 2020 &ndash; Present</span>
+      </div>
       <ul>
         <li>
-          Designed interfaces/mocks to be presented to customers for feedback.
-        </li>
-        <li>Supported engineers in best practices for UI/UX design.</li>
-        <li>
-          Analyzed and designed enhancements and fixes to application code.
+          Rebranded the entire storefront and built a custom Shopify theme
+          from the ground up, with a modular, performance-first architecture
+          on Online Store 2.0.
         </li>
         <li>
-          Increased the load speed of our existing web application and reduced
-          the DOM hierarchy.
+          Designed and shipped in-house Shopify apps: a loyalty program, an
+          advanced wishlist, and a custom analytics system that tracks line
+          item properties — data Shopify does not expose natively — to give
+          merchandising visibility into product personalization.
         </li>
         <li>
-          Architected a new structure with React.js as a UI framework and Redux
-          as a state management library.
+          Built a theme settings scheduler that lets the marketing team plan
+          and automate site-wide changes (banners, copy, promotions) without
+          engineering involvement.
+        </li>
+        <li>
+          Developed Checkout UI extensions and Shopify Functions API
+          integrations: address validation, custom engraving fees, gift notes,
+          and tiered discount logic.
+        </li>
+        <li>
+          Implemented advanced product personalization on the storefront,
+          including monogramming and multi-step engraving configurators.
+        </li>
+        <li>
+          Built complex product bundle builders that lifted average order
+          value and conversion rate.
+        </li>
+        <li>
+          Drove a continuous A/B testing program over five years, producing
+          sustained CRO gains across PDP, cart, and checkout.
+        </li>
+        <li>
+          Partnered with Rivo, Intelligems, and DTC Pages on UX optimization,
+          integration work, and CRO experimentation.
         </li>
       </ul>
-      <p>
-        <span className="resume-position">UX Engineer | Part-time</span>
-        &nbsp;&nbsp;&nbsp;
-        <span className="resume-company">Krownthemes</span>
-        <br />
+
+      <div className="resume-job">
+        <h3>
+          UX Engineer @{" "}
+          <a href="https://krownthemes.com/">Krownthemes</a>
+        </h3>
         <span className="resume-date">May 2020 &ndash; December 2021</span>
-      </p>
+      </div>
       <ul>
         <li>
-          Worked closely with designers and created best-in-class e-commerce
-          experiences.
+          Built and maintained Shopify themes alongside the design team,
+          shipping commerce experiences for a wide range of merchants.
         </li>
         <li>
-          Created aesthetically excellent design work and prototypes that
-          include thoughtful motion and transitions.
+          Produced design work and interactive prototypes covering layout,
+          motion, and component states.
         </li>
         <li>
-          Increased code quality and velocity by bringing in industry standards
-          tools and best practices.
+          Introduced tooling and conventions that improved code quality and
+          shipping velocity across the team.
         </li>
-        <li>Provided design guidance and code reviews to other teammates.</li>
+        <li>
+          Reviewed pull requests and supported other engineers on design
+          implementation.
+        </li>
       </ul>
-      <p>
-        <span className="resume-position">UX Engineer | Part-time</span>
-        &nbsp;&nbsp;&nbsp;
-        <span className="resume-company">Sweat Pants Agency</span>
-        <br />
+
+      <div className="resume-job">
+        <h3>
+          UX Engineer @{" "}
+          <a href="https://sweatpantsagency.com/">Sweat Pants Agency</a>
+        </h3>
         <span className="resume-date">December 2019 &ndash; August 2020</span>
-      </p>
+      </div>
       <ul>
-        <li>Developed new infrastructure for Frontend projects.</li>
         <li>
-          Collaborated with designers and product management team to assess
-          project outcomes and prioritize future app features.
+          Set up frontend infrastructure and shared tooling for new client
+          projects.
         </li>
         <li>
-          Worked closely with the UX designers, engineers, and researchers to
-          create rapid prototypes from design mocks for scaled user testing and
-          iterations.
+          Worked with design and product on scoping, prioritization, and
+          feature definition.
+        </li>
+        <li>
+          Built prototypes from design mocks for user testing and rapid
+          iteration.
         </li>
       </ul>
-      <p>
-        <span className="resume-position">UX Engineer</span>&nbsp;&nbsp;&nbsp;
-        <span className="resume-company">
-          Spark Minds Martial Arts Software
+
+      <div className="resume-job">
+        <h3>
+          UX Engineer @{" "}
+          <a href="https://sparkmembership.com/">
+            Spark Minds Martial Arts Software
+          </a>
+        </h3>
+        <span className="resume-date">
+          December 2017 &ndash; November 2019
         </span>
-        <br />
-        <span className="resume-date">December 2017 &ndash; November 2019</span>
-      </p>
+      </div>
       <ul>
         <li>
-          Delivered innovative, engaging prototypes using the latest in
-          front-end technologies.
+          Built prototypes and production UI for a multi-platform martial arts
+          management product.
         </li>
         <li>
-          Designed new experiences and patterns in a complex ecosystem and
-          across platforms.
+          Designed new flows and components across web and admin surfaces.
         </li>
         <li>
-          Collaborated with design and engineering partners to identify new
-          opportunities and generate innovative ideas to improve web
-          experiences.
+          Collaborated with design and engineering to identify and ship UX
+          improvements informed by customer feedback.
         </li>
       </ul>
-      <p>
-        <span className="resume-position">UX Engineer</span>&nbsp;&nbsp;&nbsp;
-        <span className="resume-company">Freelancer</span>
-        <br />
-        <span className="resume-date">2014 &ndash; 2017</span>
-      </p>
+
+      <h2>Education</h2>
+      <div className="resume-job">
+        <h3>
+          Bachelor of Computer Science @{" "}
+          <span className="resume-company-text">Tbilisi State University</span>
+        </h3>
+        <span className="resume-date">2016 &ndash; 2020</span>
+      </div>
     </div>
   )
 }

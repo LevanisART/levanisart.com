@@ -603,44 +603,75 @@ textarea {
 }
 
 .resume {
-  width: 700px;
-  max-width: 100%;
+  max-width: 50em;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 0.5em 1.5em 1.5em;
   font-family: Roboto, sans-serif;
   color: #000;
 
-  // restore browser defaults stripped by reset
+  h1,
   h2,
+  h3,
   p,
   ul,
   li,
   span,
-  b,
-  a,
-  br {
+  b {
     font-family: Roboto, sans-serif;
     color: #000;
   }
 
-  h2 {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin: 0.83em 0;
+  a {
+    font-family: Roboto, sans-serif;
   }
 
-  p {
-    margin: 1em 0;
+  .resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5em 1em;
+  }
+
+  h1 {
+    font-size: 1.9em;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 0.95em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid #000;
+    margin: 1.1em 0 0.45em;
+    padding-bottom: 0.15em;
+  }
+
+  h3 {
+    font-size: 0.95em;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  p,
+  li {
+    font-size: 0.85em;
+    line-height: 1.4em;
+    margin: 0;
   }
 
   ul {
     list-style: disc;
-    padding-left: 2em;
-    margin: 1em 0;
+    padding: 0 0 0 1.2em;
+    margin: 0.2em 0 0.2em;
   }
 
   li {
     display: list-item;
+    margin: 0.05em 0;
   }
 
   a {
@@ -654,26 +685,28 @@ textarea {
     }
   }
 
-  blockquote {
-    border-left: 5px solid #ddd;
-    margin: 1em 0;
-    padding-left: 0.6em;
+  .resume-contact {
+    font-size: 0.8em;
   }
 
-  .resume-name {
-    font-weight: bold;
-    font-size: 20px;
+  .resume-summary {
+    margin: 0.5em 0 0;
   }
 
-  .resume-position {
-    font-weight: bold;
-  }
-
-  .resume-company {
-    text-decoration: underline;
+  .resume-job {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1em;
+    margin-top: 0.55em;
   }
 
   .resume-date {
-    font-size: 14px;
+    font-size: 0.8em;
+    white-space: nowrap;
+  }
+
+  .resume-company-text {
+    text-decoration: underline;
   }
 }
