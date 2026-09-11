@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Layout from "../components/Layout"
 
 export default function NotFound() {
@@ -8,9 +9,9 @@ export default function NotFound() {
         <p className="mt-4">
           The page you&#39;re looking for doesn&#39;t exist.
         </p>
-        <a href="/" className="btn btn-outline-dark mt-3">
+        <Link href="/" className="btn btn-outline-dark mt-3">
           Go Home
-        </a>
+        </Link>
       </div>
     </Layout>
   )

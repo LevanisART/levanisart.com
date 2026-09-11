@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export const metadata = {
   title: "Resume - Levan K.",
   description: "Resume of Levan Kotolashvili - Senior UX Engineer",
@@ -8,7 +10,7 @@ export default function ResumePage() {
     <div className="resume">
       <header className="resume-header">
         <h1>
-          <a href="/">Levan Kotolashvili</a>
+          <Link href="/">Levan Kotolashvili</Link>
         </h1>
         <div className="resume-contact">
           Email:{" "}
@@ -16,7 +18,7 @@ export default function ResumePage() {
             levani.qotolashvili@gmail.com
           </a>
           &nbsp;@&nbsp;
-          <a href="/">Portfolio</a>
+          <Link href="/">Portfolio</Link>
           &nbsp;@&nbsp;
           <a href="https://github.com/LevanisART">GitHub</a>
           &nbsp;@&nbsp;
