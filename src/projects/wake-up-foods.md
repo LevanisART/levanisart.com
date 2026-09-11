@@ -10,6 +10,11 @@ featuredImage: "../images/projects/wake-up-foods/featured.png"
 featuredVideo: null
 sharebuttons: true
 projectLink: null
+tags:
+  - label: "Food E-commerce"
+    color: "tag-orange"
+  - label: "Shopify"
+    color: "tag-green"
 ---
 
 <br />

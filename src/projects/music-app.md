@@ -10,4 +10,7 @@ featuredImage: "../images/projects/music-app.png"
 featuredVideo: null
 sharebuttons: true
 projectLink: "https://dribbble.com/shots/10852439-Music-App"
+tags:
+  - label: "Music App"
+    color: "tag-pink"
 ---

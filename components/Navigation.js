@@ -40,7 +40,7 @@ const Navigation = () => {
   }, [navbarOpen])
 
   return (
-    <div>
+    <div className="nav-figma">
       <div className="navbar-bg"></div>
       <Navbar
         collapseOnSelect
@@ -48,7 +48,7 @@ const Navigation = () => {
         className="p-0"
         expanded={navbarOpen}
       >
-        <div className="header-burger d-flex align-items-center">
+        <div className="header-burger d-flex align-items-center d-lg-none">
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
             className={`header-burger-btn burger ${navbarOpen ? "" : "collapsed"}`}
@@ -61,14 +61,14 @@ const Navigation = () => {
         </div>
 
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav>
+          <Nav className="nav-figma-menu">
             <div className="nav-item">
               <Link
                 className={`nav-link${pathname === "/" || pathname.startsWith("/projects") ? " active" : ""}`}
                 href="/"
                 onClick={updateBodyStyle}
               >
-                Work
+                <span className="nav-paren">(</span>Projects<span className="nav-paren">)</span>
               </Link>
             </div>
             <div className="nav-item">
@@ -77,11 +77,13 @@ const Navigation = () => {
                 href="/contact"
                 onClick={updateBodyStyle}
               >
-                Contact
+                <span className="nav-paren">(</span>Contact<span className="nav-paren">)</span>
               </Link>
             </div>
           </Nav>
-          <Socials />
+          <div className="d-lg-none">
+            <Socials />
+          </div>
         </Navbar.Collapse>
       </Navbar>
     </div>

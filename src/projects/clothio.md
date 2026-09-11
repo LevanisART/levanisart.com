@@ -10,6 +10,9 @@ featuredImage: "../images/projects/clothio/featured.png"
 featuredVideo: null
 sharebuttons: true
 projectLink: null
+tags:
+  - label: "Fashion E-commerce"
+    color: "tag-black"
 ---
 
 <br />

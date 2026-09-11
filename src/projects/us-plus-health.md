@@ -10,6 +10,11 @@ featuredImage: "../images/projects/us-plus-health/featured.png"
 featuredVideo: null
 sharebuttons: true
 projectLink: null
+tags:
+  - label: "Healthcare Store"
+    color: "tag-teal"
+  - label: "Shopify"
+    color: "tag-green"
 ---
 
 <br />

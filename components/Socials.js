@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Socials = () => {
+const Socials = ({ compact = false }) => {
   return (
-    <div className="socials d-flex justify-content-center">
+    <div className={`socials d-flex justify-content-center${compact ? " socials-compact" : ""}`}>
       <div className="social my-3 my-lg-0">
         <a target="_blank" rel="noopener noreferrer" href="https://dribbble.com/LevanisART">
           <div className="sr-only">Dribbble</div>

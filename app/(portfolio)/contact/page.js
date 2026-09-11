@@ -5,39 +5,54 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div>
-      <h1 className="title">Let&#39;s work together</h1>
-      <p className="mt-4">
-        I&#39;m always open to discussing new opportunities and interesting
-        projects.
-      </p>
-      <p className="mt-5">
-        Email -{" "}
-        <a href="mailto:levani.qotolashvili@gmail.com">
-          levani.qotolashvili@gmail.com
-        </a>
-      </p>
+    <div className="contact-split">
+      <aside className="contact-split-left">
+        <h1 className="contact-headline">
+          Let&rsquo;s work<br />together
+        </h1>
+      </aside>
 
-      <div className="contact-content mt-5">
-        <div className="row">
-          <div className="col-lg-8">
-            <form action="https://formspree.io/f/manwqway" method="POST">
-              <div class="d-flex flex-wrap gap-10 contact-info">
-                <div className="form-input col-lg-6 col-12 px-0 pe-lg-2">
-                  <input type="text" placeholder="Name" name="name" />
-                </div>
-                <div className="form-input col-lg-6 col-12 px-0 ps-lg-2">
-                  <input type="email" placeholder="E-mail" name="email" />
-                </div>
+      <div className="contact-split-right">
+        <div className="contact-section">
+          <p className="contact-text">
+            Whether you have a product idea, need a
+            design refresh, or want to build something from scratch -
+            I&rsquo;d love to hear from you.
+          </p>
+        </div>
+
+        <div className="contact-section">
+          <span className="contact-label">(Email)</span>
+          <a
+            href="mailto:levani.qotolashvili@gmail.com"
+            className="contact-email"
+          >
+            levani.qotolashvili@gmail.com
+          </a>
+        </div>
+
+        <div className="contact-section">
+          <span className="contact-label">(Message)</span>
+          <form
+            action="https://formspree.io/f/manwqway"
+            method="POST"
+            className="contact-form"
+          >
+            <div className="contact-form-row">
+              <div className="contact-field">
+                <input type="text" placeholder="Name" name="name" />
               </div>
-              <div class="form-input">
-                <textarea placeholder="Message" name="message"></textarea>
+              <div className="contact-field">
+                <input type="email" placeholder="E-mail" name="email" />
               </div>
-              <div class="submit-button">
-                <input class="btn" type="submit" value="Submit" />
-              </div>
-            </form>
-          </div>
+            </div>
+            <div className="contact-field">
+              <textarea placeholder="Message" name="message" />
+            </div>
+            <button type="submit" className="contact-submit">
+              Send message &rarr;
+            </button>
+          </form>
         </div>
       </div>
     </div>

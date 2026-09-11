@@ -10,6 +10,11 @@ featuredImage: "../images/projects/liberty-banking-app/liberty-banking-app.png"
 featuredVideo: null
 sharebuttons: true
 projectLink: "https://dribbble.com/shots/10739025-Liberty-Banking-App-Redesign"
+tags:
+  - label: "Banking App"
+    color: "tag-blue"
+  - label: "App Redesign"
+    color: "tag-purple"
 ---
 
 <br />

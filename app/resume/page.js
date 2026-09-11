@@ -38,19 +38,19 @@ export default function ResumePage() {
       </div>
       <ul>
         <li>
-          Rebranded the entire storefront and built a custom Shopify theme
-          from the ground up, with a modular, performance-first architecture
-          on Online Store 2.0.
+          Rebranded the entire storefront and built a custom Shopify theme from
+          the ground up, with a modular, performance-first architecture on
+          Online Store 2.0.
         </li>
         <li>
           Designed and shipped in-house Shopify apps: a loyalty program, an
-          advanced wishlist, and a custom analytics system that tracks line
-          item properties — data Shopify does not expose natively — to give
+          advanced wishlist, and a custom analytics system that tracks line item
+          properties - data Shopify does not expose natively - to give
           merchandising visibility into product personalization.
         </li>
         <li>
-          Built a theme settings scheduler that lets the marketing team plan
-          and automate site-wide changes (banners, copy, promotions) without
+          Built a theme settings scheduler that lets the marketing team plan and
+          automate site-wide changes (banners, copy, promotions) without
           engineering involvement.
         </li>
         <li>
@@ -63,23 +63,22 @@ export default function ResumePage() {
           including monogramming and multi-step engraving configurators.
         </li>
         <li>
-          Built complex product bundle builders that lifted average order
-          value and conversion rate.
+          Built complex product bundle builders that lifted average order value
+          and conversion rate.
         </li>
         <li>
           Drove a continuous A/B testing program over five years, producing
           sustained CRO gains across PDP, cart, and checkout.
         </li>
         <li>
-          Partnered with Rivo, Intelligems, and DTC Pages on UX optimization,
-          integration work, and CRO experimentation.
+          Partnered with enterprises like Rivo, Intelligems, and DTC Pages on UX
+          optimization, integration work, and CRO experimentation.
         </li>
       </ul>
 
       <div className="resume-job">
         <h3>
-          UX Engineer @{" "}
-          <a href="https://krownthemes.com/">Krownthemes</a>
+          UX Engineer @ <a href="https://krownthemes.com/">Krownthemes</a>
         </h3>
         <span className="resume-date">May 2020 &ndash; December 2021</span>
       </div>
@@ -115,8 +114,8 @@ export default function ResumePage() {
           projects.
         </li>
         <li>
-          Worked with design and product on scoping, prioritization, and
-          feature definition.
+          Worked with design and product on scoping, prioritization, and feature
+          definition.
         </li>
         <li>
           Built prototypes from design mocks for user testing and rapid
@@ -131,9 +130,7 @@ export default function ResumePage() {
             Spark Minds Martial Arts Software
           </a>
         </h3>
-        <span className="resume-date">
-          December 2017 &ndash; November 2019
-        </span>
+        <span className="resume-date">December 2017 &ndash; November 2019</span>
       </div>
       <ul>
         <li>
@@ -146,6 +143,19 @@ export default function ResumePage() {
         <li>
           Collaborated with design and engineering to identify and ship UX
           improvements informed by customer feedback.
+        </li>
+      </ul>
+
+      <h2>Awards</h2>
+      <div className="resume-job">
+        <h3>Winner &mdash; DemTech Hackathon</h3>
+        <span className="resume-date">2025</span>
+      </div>
+      <ul>
+        <li style={{ listStyleType: "none" }}>
+          Developed an offline-first messaging application to ensure secure and
+          reliable communication in high-density, network-congested
+          environments.
         </li>
       </ul>
 

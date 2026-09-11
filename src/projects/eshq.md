@@ -10,4 +10,9 @@ featuredImage: "../images/projects/eshq/eshq.jpg"
 featuredVideo: null
 sharebuttons: true
 projectLink: null
+tags:
+  - label: "Dating App"
+    color: "tag-pink"
+  - label: "Social Platform"
+    color: "tag-purple"
 ---
