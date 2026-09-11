@@ -9,8 +9,12 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
-    formats: ['image/avif', 'image/webp'],
-    unoptimized: false, // Allow Next.js image optimization for localhost
+    // Serve originals directly instead of routing through the image optimizer.
+    // Our project screenshots are very tall (some >20,000px), which exceeds the
+    // optimizer/CDN max-dimension cap and causes broken images on the deployed
+    // site. Bypassing optimization keeps full retina quality and renders them
+    // reliably (also removes the image-optimizer attack surface).
+    unoptimized: true,
   },
   compiler: {
     styledComponents: true,
